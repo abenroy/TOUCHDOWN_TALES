@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Touchdown Tales Trivia Book Series</title>
+<meta name="description" content="Touchdown Tales Trivia — college football trivia adventures featuring legendary teams, traditions, and 600-question challenges.">
+
+<style>
+:root{
+  --bg:#0b1020;
+  --card:#121c3a;
+  --border:#2a3a77;
+  --text:#eaf0ff;
+  --muted:#b9c6ffcc;
+  --accent:#6ea8ff;
+  --success:#7cffb2;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:radial-gradient(1200px 600px at 20% -10%, rgba(110,168,255,.25), transparent 60%), var(--bg);
+  color:var(--text);
+  line-height: 1.5;
+}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:auto;padding:28px 18px 80px}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-bottom:24px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,#6ea8ff,#7cffb2);
+}
+.brand b{font-size:18px;}
+
+.hero{
+  background:linear-gradient(180deg,#121c3a,#0f1730);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:40px 28px;
+  margin-bottom:20px;
+}
+.hero h1{margin:0 0 12px;font-size:36px; color: #fff;}
+.hero p{color:var(--muted);max-width:750px; font-size: 1.1rem; margin: 0;}
+
+.subscribe-bar {
+  background: rgba(110, 168, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sub-form { display: flex; gap: 10px; flex-grow: 1; max-width: 500px; }
+.sub-form input {
+  flex-grow: 1; padding: 12px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--bg); color: #fff;
+}
+.btn-sub {
+  background: var(--accent); color: var(--bg); border: none; padding: 12px 24px;
+  border-radius: 10px; font-weight: 700; cursor: pointer;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:rgba(18,28,58,.85);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  display:flex;
+  gap:16px;
+  transition: transform 0.2s ease;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+.cover-placeholder {
+  width:90px;
+  height:125px;
+  border-radius:8px;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--accent);
+  flex-shrink:0;
+  border: 1px solid var(--accent);
+  padding: 5px;
+}
+
+.meta{ display: flex; flex-direction: column; justify-content: space-between; }
+.meta b{font-size:16px; color: #fff; margin-bottom: 4px;}
+.meta span{font-size:13px;color:var(--muted); line-height: 1.4;}
+
+.actions{ margin-top:12px; }
+.btn{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:10px;
+  background:rgba(110,168,255,0.1);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  font-size:12px;
+}
+
+footer{
+  margin-top:60px;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+@media(max-width:768px){
+  .subscribe-bar { flex-direction: column; align-items: flex-start; }
+  .sub-form { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo"></div>
+      <b>Touchdown Tales Trivia</b>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Touchdown Tales Trivia Book Series</h1>
+    <p>Test your knowledge, relive legendary moments, and celebrate college football traditions with 600-question challenges.</p>
+  </section>
+
+  <section class="subscribe-bar">
+    <div>
+      <h3 style="margin:0; font-size:18px; color:var(--accent);">Join the Huddle</h3>
+      <p style="margin:4px 0 0; font-size:14px; color:var(--muted);">Get notified of new team releases.</p>
+    </div>
+    <form class="sub-form" id="subForm">
+      <input type="email" placeholder="Email Address" required>
+      <button type="submit" class="btn-sub">Subscribe</button>
+    </form>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <div class="cover-placeholder">NOTRE DAME</div>
+      <div class="meta">
+        <div><b>Notre Dame Fighting Irish</b><span>600 Questions Celebrating the Fighting Irish</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/46c5u2x" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">MICHIGAN</div>
+      <div class="meta">
+        <div><b>Michigan Wolverines</b><span>Gridiron Legends, Rivalries & Traditions</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/3Z3S6K5" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">TEXAS</div>
+      <div class="meta">
+        <div><b>Texas Longhorns</b><span>History, Legends & Rivalries of Texas Football</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/4qP8NoR" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">FLORIDA</div>
+      <div class="meta">
+        <div><b>Florida Gators</b><span>Legends, History & Traditions</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/45HLcOm" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">TULANE</div>
+      <div class="meta">
+        <div><b>Tulane Green Wave</b><span>Players, Rivals & Unforgettable Moments</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/46c5zDn" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">ALABAMA</div>
+      <div class="meta">
+        <div><b>Alabama Crimson Tide</b><span>Football Legends & Championships</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/4t5OFjA" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">OKLAHOMA</div>
+      <div class="meta">
+        <div><b>Oklahoma Sooners</b><span>Sooner Football History & Highlights</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/4t8EFpU" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover-placeholder">OHIO STATE</div>
+      <div class="meta">
+        <div><b>Ohio State Buckeyes</b><span>Legends, Traditions & Buckeye Glory</span></div>
+        <div class="actions"><a class="btn" href="https://amzn.to/3NLtLpT" target="_blank">View on Amazon</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>&copy; <span id="year"></span> Touchdown Tales Trivia</div>
+    <div>As an Amazon Associate, I may earn from qualifying purchases.</div>
+  </footer>
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("subForm").onsubmit = (e) => {
+  e.preventDefault();
+  alert("Welcome to the team!");
+};
+</script>
+
+</body>
+</html>
